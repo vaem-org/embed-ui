@@ -7,9 +7,10 @@
   import videojs from 'video.js';
   import each from 'lodash/each';
   import 'video.js/dist/video-js.min.css';
+  import config from '../config';
 
   export default {
-    name: 'embed',
+    name: 'VaemVideo',
 
     methods: {
       async load() {
@@ -19,7 +20,7 @@
 
         this.player.src({
           type: 'application/x-mpegURL',
-          src: process.env.VUE_APP_API_URL + item.streamUrl
+          src: config.apiUrl + item.streamUrl
         });
 
         const subtitles = (item || {}).subtitles;
@@ -27,7 +28,7 @@
           this.player.addRemoteTextTrack({
             kind: 'subtitles',
             srclang: language,
-            src: process.env.VUE_APP_API_URL + url,
+            src: config.apiUrl + url,
             default: language === 'nl'
           });
         });

@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Embed from './views/Embed.vue'
+import config from './config';
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: config.baseUrl,
   routes: [
     {
       path: '/:assetId',
