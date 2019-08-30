@@ -1,5 +1,5 @@
 FROM node:10
-COPY ./ /app
+ADD ./ /app
 WORKDIR /app
 RUN yarn && yarn build
 
@@ -9,5 +9,7 @@ COPY --from=0 /app/dist /app
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
 COPY docker/entrypoint.sh /entrypoint.sh
+
+ENV WEBPACK_BASE_URL "."
 
 CMD ["/entrypoint.sh"]
