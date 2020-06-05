@@ -244,10 +244,11 @@
   }
 
   .video-js .vjs-play-progress, .video-js .vjs-volume-level {
+    background: rgba(221, 221, 221, 0.9);
   }
 
   .video-js .vjs-load-progress {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(221, 221, 221, 0.8);
   }
 
   .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
