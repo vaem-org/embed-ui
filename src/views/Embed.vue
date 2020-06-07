@@ -17,7 +17,14 @@
   -->
 
 <template>
-  <video ref="video" class="video-js vjs-default-skin" controls autoplay>
+  <video
+    ref="video"
+    class="video-js vjs-default-skin"
+    :controls="controls"
+    :autoplay="autoplay"
+    :loop="loop"
+    :muted="muted"
+  >
   </video>
 </template>
 
@@ -29,6 +36,21 @@
 
   export default {
     name: 'VaemVideo',
+
+    computed: {
+      controls() {
+        return this.$route.query.controls !== '0';
+      },
+      autoplay() {
+        return this.$route.query.autoplay === '1';
+      },
+      loop() {
+        return this.$route.query.loop === '1';
+      },
+      muted() {
+        return this.$route.query.muted === '1';
+      }
+    },
 
     methods: {
       async load() {
