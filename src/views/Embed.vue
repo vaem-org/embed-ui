@@ -76,7 +76,9 @@
     },
 
     async mounted() {
-      this.player = videojs(this.$refs.video, null, () => {
+      this.player = videojs(this.$refs.video, {
+        loadingSpinner: this.controls
+      }, () => {
         this.load()
           .catch(e => console.error(e))
       });
