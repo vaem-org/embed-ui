@@ -1,9 +1,9 @@
 FROM node:10
 WORKDIR /app
-COPY package.json /app
-COPY yarn.lock /app
+ADD package.json /app
+ADD yarn.lock /app
 RUN yarn
-COPY ./ /app
+ADD ./ /app
 RUN yarn build
 
 FROM nginx:stable-alpine
