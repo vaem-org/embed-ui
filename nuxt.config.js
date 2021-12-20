@@ -88,5 +88,9 @@ export default {
     optimizeDeps: {
       include: ['videojs-vtt.js', 'hls.js']
     }
+  },
+
+  router: {
+    base: process.env.BASE ?? '/'
   }
 }
