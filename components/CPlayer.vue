@@ -1,6 +1,6 @@
 <template>
   <vaem-player
-    :src="src"
+    :src="item.stream"
     :aspect-ratio="0"
     :text-tracks="textTracks"
     v-bind="$attrs"
@@ -22,13 +22,10 @@ export default {
     }
   },
   computed: {
-    src () {
-      return `${this.$config.apiUrl}${this.item?.stream}/${this.$route.params.assetId}.m3u8`
-    },
     textTracks () {
       return Object.entries(this.item?.subtitles ?? {}).map(([srclang, src], i) => ({
         srclang,
-        src: this.$config.apiUrl + src,
+        src,
         default: i === 0
       }))
     }
