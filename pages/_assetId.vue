@@ -20,7 +20,8 @@ export default {
         controls: this.$route.query.controls !== '0',
         autoplay: this.$route.query.autoplay === '1',
         muted: this.$route.query.muted === '1',
-        loop: this.$route.query.loop === '1'
+        loop: this.$route.query.loop === '1',
+        primaryColor: this.$route.query.color
       }
     }
   }
