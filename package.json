@@ -1,33 +1,29 @@
 {
-  "name": "vaem-embed-ui",
-  "version": "1.0.0",
-  "private": true,
+  "name": "embed-ui",
+  "type": "module",
+  "version": "2.0.0",
+  "private": false,
+  "repository": {
+    "url": "https://github.com/vaem-org/embed-ui.git"
+  },
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "@vaem/player": "^0.1.6",
-    "core-js": "^3.15.1",
-    "nuxt": "^2.15.7",
-    "vuetify": "^2.5.5"
+    "@nuxt/eslint": "1.15.2",
+    "@vaem/player": "^2.0.5",
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.32",
+    "vue-router": "^5.0.4",
+    "vuetify-nuxt-module": "^0.19.5"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.7",
-    "@nuxt/types": "~2.15.0",
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/vuetify": "^1.12.1",
-    "eslint": "^7.29.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.12.1"
+    "eslint": "^10.2.0",
+    "typescript": "^6.0.2"
   },
-  "engines": {
-    "node": "^20.0.0"
-  }
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }
