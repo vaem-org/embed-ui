@@ -15,15 +15,15 @@
   },
   "dependencies": {
     "@nuxt/eslint": "1.15.2",
-    "@vaem/player": "^2.0.5",
-    "nuxt": "^4.4.2",
-    "vue": "^3.5.32",
-    "vue-router": "^5.0.4",
+    "@vaem/player": "^2.0.8",
+    "nuxt": "^4.4.4",
+    "vue": "^3.5.33",
+    "vue-router": "^5.0.6",
     "vuetify-nuxt-module": "^0.19.5"
   },
   "devDependencies": {
-    "eslint": "^10.2.0",
-    "typescript": "^6.0.2"
+    "eslint": "^10.3.0",
+    "typescript": "^6.0.3"
   },
   "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }

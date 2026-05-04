@@ -25,15 +25,14 @@ const password = ref('')
 const item = ref<StreamInfo>()
 const invalidPassword = ref(false)
 
-const src = computed(() => `${config.apiUrl}${item.value?.stream}/${route.params.assetId}.m3u8`)
-
 async function submit() {
   invalidPassword.value = false
   const { timestamp, signature, assetId } = route.params
   try {
     item.value = await api(`signed/${timestamp}/0/${signature}/assets/${assetId}/share/${password.value}`)
   }
-  catch (_e) {
+  catch (e) {
+    console.error(e)
     invalidPassword.value = true
   }
 }

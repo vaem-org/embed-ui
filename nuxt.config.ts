@@ -26,6 +26,9 @@ export default defineNuxtConfig({
       apiUrl: '',
     },
   },
+  experimental: {
+    viteEnvironmentApi: true,
+  },
   compatibilityDate: '2025-07-15',
   vite: {
     optimizeDeps: {
