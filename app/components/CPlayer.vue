@@ -39,6 +39,7 @@ const textTracks = computed(() => {
     :src="item.stream"
     :aspect-ratio="0"
     :text-tracks="textTracks"
+    force-hls-js
     v-bind="$attrs"
   />
 </template>
